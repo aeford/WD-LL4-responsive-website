@@ -1,0 +1,128 @@
+/* Basic reset for margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Use a clean, easy-to-read font combo */
+body {
+  font-family: 'Segoe UI', 'Arial', sans-serif; /* Main font for body text */
+  background-color: #eafaf1; /* Very light green background for eco feel */
+  color: #222; /* Dark gray for text */
+}
+
+/* Style the header with a soft green */
+header {
+  background-color: #7ec49d; /* Soft eco-friendly green */
+  color: #174c4f; /* Deep blue-green for text */
+  padding: 16px 0;
+  display: flex; /* Use flexbox to arrange children in a row */
+  flex-direction: column; /* Stack items vertically on mobile */
+  align-items: center;    /* Center items horizontally */
+}
+
+/* Logo styles */
+.logo {
+  font-family: 'Georgia', 'Times New Roman', serif; /* Elegant serif for logo */
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 12px;
+  color: #174c4f; /* Deep blue-green for logo text */
+}
+
+/* Navigation bar styles */
+nav {
+  width: 100%;
+}
+
+/* Navigation links list */
+.nav-links {
+  list-style: none; /* Remove bullets */
+  display: flex;
+  flex-direction: column; /* Stack links vertically on mobile */
+  align-items: center;
+  gap: 10px; /* Space between links */
+}
+
+/* Navigation link styles */
+.nav-links a {
+  color: #174c4f; /* Deep blue-green for nav links */
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.2s;
+  background-color: #dff1f3; /* Soft blue background for links */
+}
+
+.nav-links a:hover {
+  background-color: #b2dfdb; /* Slightly deeper blue-green on hover */
+  color: #145a32; /* Darker green for hover text */
+}
+
+/* Hero section styles */
+.hero {
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Use flexbox to center content */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center;
+  background: linear-gradient(135deg, #eafaf1 0%, #b2dfdb 50%, #7ec49d 100%); /* Soft green/blue gradient */
+  padding: 24px;
+}
+
+.hero h1 {
+  font-family: 'Georgia', 'Times New Roman', serif; /* Match logo font */
+  font-size: 3em; /* Make the headline larger */
+  font-weight: bold; /* Make the headline bolder */
+  color: #174c4f; /* Deep blue-green */
+  margin-bottom: 16px;
+  letter-spacing: 1px; /* Add a little spacing for emphasis */
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: #145a32; /* Darker green */
+  margin-bottom: 28px;
+  max-width: 500px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: #7ec49d; /* Soft green */
+  color: #174c4f; /* Deep blue-green */
+  font-size: 1.1em;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+}
+
+.cta-btn:hover {
+  background-color: #174c4f;
+  color: #eafaf1;
+}
+
+/* Media query for desktop: show name and nav bar in a row */
+@media (min-width: 600px) {
+  header {
+    flex-direction: row; /* Place logo and nav side by side on desktop */
+    justify-content: space-between; /* Space out logo and nav */
+    align-items: center;
+    padding: 16px 32px;
+  }
+  .logo {
+    text-align: left;
+    margin-bottom: 0;
+    margin-left: 32px;
+  }
+  .nav-links {
+    flex-direction: row; /* Show links in a row on desktop */
+    gap: 24px;
+  }
+}
